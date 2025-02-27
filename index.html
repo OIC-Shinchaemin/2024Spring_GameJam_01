@@ -24,7 +24,6 @@
         }
         .iframe-container {
             width: 48%;
-            height: 300px;
             border: 1px solid #ccc;
             position: relative;
             cursor: pointer;
@@ -34,10 +33,10 @@
             align-items: center;
         }
         .iframe-container img {
-            width: 100%;
-            height: 80%;
-            object-fit: cover;
-            position: relative;
+            object-fit: contain;
+            display: block;
+            max-width: 100%;
+            height: auto;
         }
         .iframe-container p {
             margin: 5px 0;
@@ -45,17 +44,21 @@
             font-weight: bold;
             text-align: center;
         }
-        .iframe-container iframe {
-            width: 100%;
-            height: 100%;
-            border: none;
-            display: none;
-        }
     </style>
     <script>
         function openGame(url) {
             window.open(url, '_blank');
         }
+        
+        document.addEventListener("DOMContentLoaded", function() {
+            document.querySelectorAll(".iframe-container img").forEach(img => {
+                img.onload = function() {
+                    const scale = 0.3;
+                    img.style.width = `${img.naturalWidth * scale}px`;
+                    img.style.height = `${img.naturalHeight * scale}px`;
+                };
+            });
+        });
     </script>
 </head>
 <body>
