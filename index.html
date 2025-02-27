@@ -51,66 +51,44 @@
             border: none;
             display: none;
         }
-        .link-button {
-            position: absolute;
-            top: 10px;
-            right: 10px;
-            background: rgba(0, 0, 0, 0.7);
-            color: white;
-            padding: 5px 10px;
-            border-radius: 5px;
-            text-decoration: none;
-            font-size: 14px;
-            cursor: pointer;
-        }
     </style>
     <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            const rows = document.querySelectorAll(".iframe-row");
-            const rowArray = Array.from(rows);
-            rowArray.sort(() => Math.random() - 0.5);
-            const parent = rows[0].parentNode;
-            rowArray.forEach(row => parent.appendChild(row));
-        });
+        function openGame(url) {
+            window.open(url, '_blank');
+        }
     </script>
 </head>
 <body>
     <h1>2024年度春季第１回目学内ゲームジャム作品</h1>
     
     <div class="iframe-row">
-        <div class="iframe-container">
-            <a class="link-button" href="https://momoe13.github.io/GameJam_release/" target="_blank">開く</a>
+        <div class="iframe-container" onclick="openGame('https://momoe13.github.io/GameJam_release/')">
             <img src="https://oic-shinchaemin.github.io/2024Spring_GameJam_01/Images/space.png" alt="スクショ">
             <p>大体メガネ - 「スペースキャッチャー」</p>
         </div>
-        <div class="iframe-container">
-            <a class="link-button" href="https://yunarelink.github.io/WebGL_Android-Sorting-Factory/" target="_blank">開く</a>
+        <div class="iframe-container" onclick="openGame('https://yunarelink.github.io/WebGL_Android-Sorting-Factory/')">
             <img src="https://oic-shinchaemin.github.io/2024Spring_GameJam_01/Images/asf.png" alt="スクショ">
             <p>crunky - 「Android Sorting Factory」</p>
         </div>
     </div>
     
     <div class="iframe-row">
-        <div class="iframe-container">
-            <a class="link-button" href="https://unityroom.com/games/loverta" target="_blank">開く</a>
+        <div class="iframe-container" onclick="openGame('https://unityroom.com/games/loverta')">
             <img src="https://oic-shinchaemin.github.io/2024Spring_GameJam_01/Images/rta.png" alt="スクショ">
             <p>6割パーマ - 「告白RTA」</p>
         </div>
-        <div class="iframe-container">
-            <a class="link-button" href="https://odatenshioic.github.io/Watashito_Koi_WebGL/" target="_blank">開く</a>
+        <div class="iframe-container" onclick="openGame('https://odatenshioic.github.io/Watashito_Koi_WebGL/')">
             <img src="https://oic-shinchaemin.github.io/2024Spring_GameJam_01/Images/love.png" alt="スクショ">
             <p>ギャグル - 「私と恋しませんか?」</p>
         </div>
     </div>
     
     <div class="iframe-row">
-        <div class="iframe-container">
-            <a class="link-button" href="https://unityroom.com/games/oic_gamejam_2025_strawberryjam" target="_blank">開く</a>
+        <div class="iframe-container" onclick="openGame('https://unityroom.com/games/oic_gamejam_2025_strawberryjam')">
             <img src="https://oic-shinchaemin.github.io/2024Spring_GameJam_01/Images/tamago.png" alt="スクショ">
             <p>ストロベリージャム - 「DYNAMICゆでたまご」</p>
         </div>
-        <div class="iframe-container">
-            <a class="link-button" href="https://unityroom.com/games/4561" target="_blank">開く</a>
+        <div class="iframe-container" onclick="openGame('https://unityroom.com/games/4561')">
             <img src="https://oic-shinchaemin.github.io/2024Spring_GameJam_01/Images/vampier.png" alt="スクショ">
             <p>麺'sCLUB作業部屋 - 「プラネテスヴァンピール」</p>
         </div>
